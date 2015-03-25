@@ -16,6 +16,11 @@ body {
   margin: 0;
 }
 
+.form-background {
+  padding: 10px;
+  padding-bottom: 50px;
+  background-color: darkgrey;
+}
 article,
 aside,
 details,

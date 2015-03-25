@@ -40,3 +40,7 @@ gem 'spring',        group: :development
 
 gem 'haml'
 gem 'twitter-bootstrap-rails'
+
+group :development, :test do 
+  gem 'pry'
+end

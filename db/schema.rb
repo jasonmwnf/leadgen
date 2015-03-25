@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150324132609) do
+ActiveRecord::Schema.define(version: 20150324141811) do
 
   create_table "listings", force: true do |t|
     t.string   "areas"
@@ -22,6 +22,23 @@ ActiveRecord::Schema.define(version: 20150324132609) do
     t.string   "time_frame"
     t.string   "reason_for_buying"
     t.string   "table_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "email_confirm"
+    t.string   "phone_number"
+    t.string   "country"
+    t.string   "prov_state"
+    t.string   "pre_qual"
+    t.string   "agent"
+    t.string   "home_to_sell"
+    t.string   "permission"
+    t.text     "questions"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

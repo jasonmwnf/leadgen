@@ -1,1 +1,6 @@
-New listing info form
+%h1 New listing info form
+= form_for @listing do |f|
+  = f.label :areas
+  = f.text_field :areas
+  %br
+  = f.submit "Test Listing"

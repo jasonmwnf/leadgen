@@ -1,6 +1,52 @@
-%h1 New listing info form
-= form_for @listing do |f|
-  = f.label :areas
-  = f.text_field :areas
-  %br
-  = f.submit "Test Listing"
+= render "shared/nav"
+.row
+  .col-lg-12
+    /%h1 Headline goes here
+.row
+  .col-lg-2
+  .col-lg-8
+    .well
+      .bs-component
+        .form-horizontal
+          %fieldset
+            %h2 Step 1. Tell us what you're looking for:
+            %br
+            = form_for @listing do |f|
+              - select_options = ["1", "2", "3", "4+"]
+              %h4 What areas would you like to receive listings from? 
+              .row
+                .col-lg-1
+                .col-lg-4
+                  .checkbox  
+                    = f.check_box :st_johns
+                    = f.label :st_johns, "St. John's"
+                  .checkbox
+                    = f.check_box :mt_pearl
+                    = f.label :mt_pearl, "Mt. Pearl"
+                  .checkbox
+                    = f.check_box :paradise
+                    = f.label :paradise, "Paradise"
+                  .checkbox
+                    = f.check_box :goulds
+                    = f.label :goulds, "Goulds"
+                  .checkbox
+                    = f.check_box :cbs
+                    = f.label :cbs, "Conception Bay South"
+                  .checkbox
+                    = f.check_box :portugal_cove
+                    = f.label :portugal_cove, "Portugal Cove"
+                  .checkbox
+                    = f.check_box :torbay
+                    = f.label :torbay, "Torbay"
+                  .checkbox
+                    = f.check_box :st_phillips
+                    = f.label :st_phillps, "St. Phillips"
+              %br
+              %h4 How many bedrooms would you like?
+              .row
+                .col-lg-1
+                .col-lg-4
+                  = f.select :bedrooms, ['1', '2', '3', '4+']
+              %br
+              = f.submit "Test Listing"
+  .col-lg-2

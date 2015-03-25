@@ -11,10 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150324141811) do
+ActiveRecord::Schema.define(version: 20150325142912) do
 
   create_table "listings", force: true do |t|
-    t.string   "areas"
     t.string   "bedrooms"
     t.string   "bathrooms"
     t.string   "min_budget"
@@ -24,6 +23,14 @@ ActiveRecord::Schema.define(version: 20150324141811) do
     t.string   "table_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "st_johns"
+    t.boolean  "mt_pearl"
+    t.boolean  "paradise"
+    t.boolean  "goulds"
+    t.boolean  "cbs"
+    t.boolean  "portugal_cove"
+    t.boolean  "torbay"
+    t.boolean  "st_phillips"
   end
 
   create_table "users", force: true do |t|

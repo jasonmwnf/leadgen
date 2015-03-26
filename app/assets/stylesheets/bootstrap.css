@@ -15,10 +15,19 @@ html {
 body {
   margin: 0;
 }
-
+.footer-section {
+  height: 50px;
+}
+.left-side {
+  padding-left: 30px;
+  text-align: center;
+  color: red;
+  background-image: url('house2.jpg');
+  background-size: cover;
+  height: 500px;
+}
 .form-background {
-  padding: 10px;
-  padding-bottom: 50px;
+  padding: 1px;
   background-color: darkgrey;
 }
 article,

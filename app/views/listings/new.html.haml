@@ -3,15 +3,15 @@
   .col-lg-12
     /%h1 Headline goes here
 .row
-  .col-lg-3
-  .col-lg-6
+  .col-lg-4
+    .left-side
+      %h2 Step 1. Tell us what you're looking for:
+  .col-lg-7
     .form-background
       .well
         .bs-component
           .form-horizontal
             %fieldset
-              %h2 Step 1. Tell us what you're looking for:
-              %br
               = form_for @listing do |f|
                 - bedroom_options = ["1", "2", "3", "4+"]
                 - bathroom_options = ['1', '1 1/2', '2', '2 1/2', '3+']
@@ -87,4 +87,6 @@
                   .col-lg-2
                   .col-lg-8
                     = f.submit "Continue", class: 'btn btn-primary btn-lg btn-block'
-  .col-lg-2
+.row
+  .col-lg-12
+    .footer-section

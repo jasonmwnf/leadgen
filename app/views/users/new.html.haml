@@ -3,18 +3,18 @@
   .col-lg-12
     /%h1 Headline goes here
 .row
-  .col-lg-3
+  .col-lg-4
   .col-lg-6
-    .well
-      .bs-component
-        .form-horizontal
-          %fieldset
-            %h2 Step 2. How can we reach you?
-            %br
-            = form_for @user do |f|
-              = f.label :first_name, "First Name:"
-              = f.text_field :first_name
+    .form-background
+      .well
+        .bs-component
+          .form-horizontal
+            %fieldset
+              %h2 Step 2. How can we reach you?
               %br
-              = f.submit "Test User"
+              = form_for @user do |f|
+                %br
+                = f.submit "Test User"
+  .col-lg-2
 
 

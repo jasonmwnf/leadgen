@@ -1,119 +1,103 @@
 = render "shared/nav"
 
-.row
-  .col-lg-12
-    .header-section
-      / %h1 Find your new home now FREE!
-      / %h2 before someone else.
-.row
-  .col-lg-2
-  .col-lg-4
-    .left-side
-  .col-lg-4
-    .form-container
-      .card
-        .well
-          .bs-component
-            .form-horizontal
-              %fieldset
-                = form_for @listing do |f|
-                  - bedroom_options = ["1", "2", "3", "4+"]
-                  - bathroom_options = ['1', '1 1/2', '2', '2 1/2', '3+']
-                  - budget_options = ['under $100k', '$110k','$120k','$130k','$140k','$150k','$160k','$170k','$180k','$190k','$200k','$210k','$220k','$230k','$240k','$250k','$260k','$270k','$280k','$290k','$300k','$310k','$320k','$330k','$340k','$350k','$360k','$370k','$380k','$390k','$400k','$410k','$420k','$430k','$440k','$450k','$460k','$470k','$480k','$490k','$500k','$600k','$700k','$800k','$900k+',]
-                  - time_options = ['Immediately', '3 months', '6 months', '12 months', 'No plans']
-                  - reason_options = ['Primary residence', 'Vacation property', 'Income property', 'To resell']
-                  %h2 Step 1. Tell us what you're looking for:
-                  %br
-                  %h4 What areas would you like to receive listings from? 
-                  .row
-                    .col-lg-1
-                    .col-lg-4
-                      .checkbox  
-                        = f.check_box :st_johns
-                        = f.label :st_johns, "St. John's"
-                      .checkbox
-                        = f.check_box :mt_pearl
-                        = f.label :mt_pearl, "Mt. Pearl"
-                      .checkbox
-                        = f.check_box :paradise
-                        = f.label :paradise, "Paradise"
-                      .checkbox
-                        = f.check_box :goulds
-                        = f.label :goulds, "Goulds"
-                      .checkbox
-                        = f.check_box :cbs
-                        = f.label :cbs, "Conception Bay South"
-                      .checkbox
-                        = f.check_box :portugal_cove
-                        = f.label :portugal_cove, "Portugal Cove"
-                      .checkbox
-                        = f.check_box :torbay
-                        = f.label :torbay, "Torbay"
-                      .checkbox
-                        = f.check_box :st_phillips
-                        = f.label :st_phillps, "St. Phillips"
-                  %br
-                  %h4 How many bedrooms would you like?
-                  .row
-                    .col-lg-1
-                    .col-lg-4
-                      = f.select :bedrooms, bedroom_options
-                  %br
-                  %h4 How many bathrooms would you like?
-                  .row
-                    .col-lg-1
-                    .col-lg-4
-                      = f.select :bathrooms, bathroom_options
-                  %br
-                  %h4 What is the MINIMUM you would like to spend?
-                  .row
-                    .col-lg-1
-                    .col-lg-4
-                      = f.select :min_budget, budget_options
-                  %br
-                  %h4 What is the MAXIMUM you would like to spend?
-                  .row
-                    .col-lg-1
-                    .col-lg-4
-                      = f.select :max_budget, budget_options
-                  %br
-                  %h4 How soon would you consider buying a home?
-                  .row
-                    .col-lg-1
-                    .col-lg-4
-                      = f.select :time_frame, time_options
-                  %br
-                  %h4 Your prospective home purchase is for?
-                  .row
-                    .col-lg-1
-                    .col-lg-4
-                      = f.select :reason_for_buying, reason_options
-                  %br
-                  .row
-                    .col-lg-2
-                    .col-lg-8
-                      = f.submit "Continue", class: 'btn btn-primary btn-lg btn-block'
+.container
+  .jumbotron
+    %h1 Newfoundland Home Finder
+    %p Find your home before it even goes up on the MLS
+    %p
+
+  .page-header
+    %h2 Step 1. Tell us what you're looking for:
+  .row
+    .col-lg-2
+    .col-lg-4
+      .left-side
+    .col-lg-4
+      .form-container
+        .card
+          .well
+            .bs-component
+              .form-horizontal
+                %fieldset
+                  = form_for @listing do |f|
+                    - bedroom_options = ["1", "2", "3", "4+"]
+                    - bathroom_options = ['1', '1 1/2', '2', '2 1/2', '3+']
+                    - budget_options = ['under $100k', '$110k','$120k','$130k','$140k','$150k','$160k','$170k','$180k','$190k','$200k','$210k','$220k','$230k','$240k','$250k','$260k','$270k','$280k','$290k','$300k','$310k','$320k','$330k','$340k','$350k','$360k','$370k','$380k','$390k','$400k','$410k','$420k','$430k','$440k','$450k','$460k','$470k','$480k','$490k','$500k','$600k','$700k','$800k','$900k+',]
+                    - time_options = ['Immediately', '3 months', '6 months', '12 months', 'No plans']
+                    - reason_options = ['Primary residence', 'Vacation property', 'Income property', 'To resell']
+
+                    %br
+                    %h4 What areas would you like to receive listings from? 
+                    .row
+                      .col-lg-1
+                      .col-lg-4
+                        .checkbox  
+                          = f.check_box :st_johns
+                          = f.label :st_johns, "St. John's"
+                        .checkbox
+                          = f.check_box :mt_pearl
+                          = f.label :mt_pearl, "Mt. Pearl"
+                        .checkbox
+                          = f.check_box :paradise
+                          = f.label :paradise, "Paradise"
+                        .checkbox
+                          = f.check_box :goulds
+                          = f.label :goulds, "Goulds"
+                        .checkbox
+                          = f.check_box :cbs
+                          = f.label :cbs, "Conception Bay South"
+                        .checkbox
+                          = f.check_box :portugal_cove
+                          = f.label :portugal_cove, "Portugal Cove"
+                        .checkbox
+                          = f.check_box :torbay
+                          = f.label :torbay, "Torbay"
+                        .checkbox
+                          = f.check_box :st_phillips
+                          = f.label :st_phillps, "St. Phillips"
+                    %br
+                    %h4 How many bedrooms would you like?
+                    .row
+                      .col-lg-1
+                      .col-lg-4
+                        = f.select :bedrooms, bedroom_options
+                    %br
+                    %h4 How many bathrooms would you like?
+                    .row
+                      .col-lg-1
+                      .col-lg-4
+                        = f.select :bathrooms, bathroom_options
+                    %br
+                    %h4 What is the MINIMUM you would like to spend?
+                    .row
+                      .col-lg-1
+                      .col-lg-4
+                        = f.select :min_budget, budget_options
+                    %br
+                    %h4 What is the MAXIMUM you would like to spend?
+                    .row
+                      .col-lg-1
+                      .col-lg-4
+                        = f.select :max_budget, budget_options
+                    %br
+                    %h4 How soon would you consider buying a home?
+                    .row
+                      .col-lg-1
+                      .col-lg-4
+                        = f.select :time_frame, time_options
+                    %br
+                    %h4 Your prospective home purchase is for?
+                    .row
+                      .col-lg-1
+                      .col-lg-4
+                        = f.select :reason_for_buying, reason_options
+                    %br
+                    .row
+                      .col-lg-2
+                      .col-lg-8
+                        = f.submit "Continue", class: 'btn btn-primary btn-lg btn-block'
 .row
   .col-lg-12
     .footer-section
 
-/ .container
-/     .row
-/         <!-- Card Projects -->
-/         .col-md-6.col-md-offset-3
-/             .card
-/                 .card-image
-/                     = image_tag "http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png"
-/                     %span.card-title Material Cards
-
-                
-/                 .card-content
-/                     .p Cards for display in portfolio style material design by Google.
-                
-/                 .card-action
-/                     = link_to "Link", "#"
-/                     <a href="#" target="new_blank">Link</a>
-/                     <a href="#" target="new_blank">Link</a>
-/                     <a href="#" target="new_blank">Link</a>
-/                     <a href="#" target="new_blank">Link</a>
      

@@ -5,16 +5,17 @@
 .row
   .col-lg-4
   .col-lg-6
-    .form-background
-      .well
-        .bs-component
-          .form-horizontal
-            %fieldset
-              %h2 Step 2. How can we reach you?
-              %br
-              = form_for @user do |f|
+    .form-container
+      .card
+        .well
+          .bs-component
+            .form-horizontal
+              %fieldset
+                %h2 Step 2. How can we reach you?
                 %br
-                = f.submit "Test User"
+                = form_for @user do |f|
+                  %br
+                  = f.submit "Test User"
   .col-lg-2
 
 

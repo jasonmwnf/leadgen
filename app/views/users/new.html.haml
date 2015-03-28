@@ -1,21 +1,51 @@
 = render "shared/nav"
-.row
-  .col-lg-12
-    /%h1 Headline goes here
-.row
-  .col-lg-4
-  .col-lg-6
-    .form-container
+
+.container
+  .jumbotron{ style: "text-align: center" }
+    %h1 FREE Home Search
+    %p Find your home before it even goes up on the MLS
+    %p
+
+  .page-header
+    %h2 Step 2. How can we reach you?
+  .row
+    .col-lg-12
       .card
         .well
           .bs-component
             .form-horizontal
               %fieldset
-                %h2 Step 2. How can we reach you?
+              %br
+              = form_for @user do |f|
+                .row
+                  .col-lg-8
+                    %h5{ style: "font-weight: bold" } 1. Please enter your first and Last names:
+                    .col-lg-6
+                      .container-1
+                        = f.text_field :first_name, class: "form-control", type: "text", placeholder: "First Name"
+                    .col-lg-6
+                      .container-2
+                        = f.text_field :last_name, class: "form-control", type: "text", placeholder: "Last Name"
+                  .col-lg-4
+                    .container-3
                 %br
-                = form_for @user do |f|
-                  %br
-                  = f.submit "Test User"
+                .row
+                  .col-lg-8
+                    %h5{ style: "font-weight: bold" } 2. Please enter your email address:
+                    .col-lg-6
+                      .container-6
+                        = f.text_field :email, class: "form-control", type: "text", placeholder: "Email address"
+                    .col-lg-6
+                      .container-6
+                        = f.text_field :email_confirm, class: "form-control", type: "text", placeholder: "Confirm email address"
+                  .col-lg-4
+                .row
+                  .col-lg-12
+                    %h5{ style: "font-weight: bold" } 3. Please enter your first and Last names:
+                .row
+                  .col-lg-4
+                  .col-lg-4
+                    = f.submit "Send me my listings!", class: 'btn btn-primary btn-lg btn-block'
   .col-lg-2
 
 

@@ -4266,8 +4266,34 @@ a.list-group-item.active > .badge,
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
+#jumbo_left {
+  height: 250px;
+  background-image: url('house3.jpg');
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+}
+
+#jumbo_right {
+  height: 250px;
+  background-image: url('house4.jpg');
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+}
+
+#jumbo_center {
+  height: 250px;
+  border-top: 5px;
+  border-top-color: white;
+  border-top-style: solid;
+  border-bottom: 5px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+}
 .jumbotron {
-  padding: 30px;
+
+  margin-top: 60px;
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 200;
@@ -4287,12 +4313,10 @@ a.list-group-item.active > .badge,
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+
   }
   .container .jumbotron {
-    padding-left: 60px;
-    padding-right: 60px;
+
   }
   .jumbotron h1 {
     font-size: 63px;
